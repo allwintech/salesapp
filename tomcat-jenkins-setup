@@ -1,0 +1,36 @@
+How to setup Jenkins?
+~~~~~~~~~~~~~~~~~~~~~
+
+Install JDK
+~~~~~~~~~~~
+Download latest JDK from Oracle.com
+- pickup the right version for your machine in gz format (eg: Linux x86 64 bit)
+- you will have to accept license for download to begin
+- downloaded bundle can be found in the default download location in your desktop environment
+- scp the bundle to the target machine where you want to install Jenkins
+
+go to web page: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+scp jdk-8u131-linux-x64.tar.gz <user-name>@<target-machine-name>:/tmp
+cd /tmp
+gunzip jdk-8u131-linux-x64.tar.gz 
+mv /tmp/jdk1.8.0_131 /usr/local/java
+export JAVA_HOME=/usr/local/java
+export PATH=${JAVA_HOME}/bin:$PATH
+
+ssh <username>@<machine-name>
+cd /tmp
+wget http://apache.mirrors.ionfish.org/tomcat/tomcat-8/v8.5.14/bin/apache-tomcat-8.5.14.tar.gz
+gunzip apache-tomcat-8.5.14.tar.gz 
+tar xvf apache-tomcat-8.5.14.tar 
+mv apache-tomcat-8.5.14 /usr/local/tomcat
+/usr/local/tomcat/bin/startup.sh
+/usr/local/tomcat/bin/shutdown.sh
+
+Download Jenkins bundle from https://jenkins.io/download/ 
+- Pick the Generic Java Package(.war) - jenkins.war
+- copy the jenkins.war to /usr/local/tomcat/webapps folder
+
+cp /tmp/jenkins.war /usr/local/tomcat/webapps
+/usr/local/tomcat/bin/startup.sh
+/usr/local/tomcat/bin/shutdown.sh
