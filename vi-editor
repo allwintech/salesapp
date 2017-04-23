@@ -1,0 +1,32 @@
+
+http://soliton.ae.gatech.edu/classes/ae6382/documents/vi/ed03.pdf
+
+type vi <filename> on terminal to open an existing file or a new file
+
+There are two modes in Vi
+  1) Esc mode or command mode
+  2) Edit mode
+  
+To go to Esc mode, you type esc key ... and then you can start typing commands
+To to go Esc-collan mode, you type Esc: and that will take you to the collan prompt.
+To go into Insert mode, you type i
+
+Anytime you want to switch to command mode, type Esc.
+
+Esc-: commands
+  set nu - for set numbers for each line
+  set nonu - for removing numbers for each line
+  :wq - save and quit
+  :w <file-name> save into the file-name and continue typing
+  :q! - will force quit without saving
+  :w! - will force save and then quit
+  
+Esc mode commands
+  dd - delete a line
+  dw - delete a word
+  a - append - start typing letters
+  i - insert - start typing letters
+  o - insert a new line below
+  O - insert a new line above
+  yy - yanking - means you add N numbers of lines into buffer. 2yy means it will add 2lines to the buffer
+  p - place or duplicate the lines or characters in buffer
