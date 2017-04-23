@@ -1,7 +1,7 @@
-hello 
-this is the list of commands for vi editor
+List of Vi Editor commands 
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-http://soliton.ae.gatech.edu/classes/ae6382/documents/vi/ed03.pdf
+Cheat-sheat is available @ http://soliton.ae.gatech.edu/classes/ae6382/documents/vi/ed03.pdf
 
 type vi <filename> on terminal to open an existing file or a new file
 
